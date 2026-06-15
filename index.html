@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SkillQuest AI V2.0</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+
+    <div class="background"></div>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>🎮 SkillQuest AI V2.0</h1>
+
+        <p>
+            Gamified Learning • Analytics • AI Suggestions
+        </p>
+
+    </header>
+
+    <!-- Dashboard -->
+
+    <div class="container">
+
+        <!-- Student Management -->
+
+        <div class="card">
+
+            <h2>👥 Student Management</h2>
+
+            <input
+                type="text"
+                id="studentInput"
+                placeholder="Enter Student Name">
+
+            <button onclick="addStudent()">
+                Add Student
+            </button>
+
+            <br><br>
+
+            <select id="studentSelect">
+
+                <option value="">
+                    Select Student
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- Student Profile -->
+
+        <div class="card">
+
+            <h2>👤 Student Profile</h2>
+
+            <p>
+                <strong>Level:</strong>
+                <span id="level">1</span>
+            </p>
+
+            <p>
+                <strong>Total XP:</strong>
+                <span id="xp">0</span>
+            </p>
+
+            <p>
+                <strong>Badge:</strong>
+                <span id="badge">
+                    🎯 Beginner
+                </span>
+            </p>
+
+        </div>
+
+        <!-- Add Task -->
+
+        <div class="card">
+
+            <h2>➕ Add Learning Task</h2>
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter Task Name">
+
+            <select id="difficulty">
+
+                <option value="10">
+                    Easy (+10 XP)
+                </option>
+
+                <option value="25">
+                    Medium (+25 XP)
+                </option>
+
+                <option value="50">
+                    Hard (+50 XP)
+                </option>
+
+            </select>
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+
+        </div>
+
+        <!-- XP Progress -->
+
+        <div class="card">
+
+            <h2>⚡ XP Progress</h2>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+            <p id="progressText">
+                0 / 100 XP
+            </p>
+
+        </div>
+
+        <!-- Learning History -->
+
+        <div class="card">
+
+            <h2>📚 Learning History</h2>
+
+            <ul id="taskList"></ul>
+
+        </div>
+
+        <!-- Leaderboard -->
+
+        <div class="card">
+
+            <h2>🏆 Leaderboard</h2>
+
+            <div id="leaderboard"></div>
+
+        </div>
+
+        <!-- Daily Streak -->
+
+        <div class="card">
+
+            <h2>🔥 Daily Streak</h2>
+
+            <h1 id="streakCount">0</h1>
+
+            <p>
+                Days Learning Continuously
+            </p>
+
+        </div>
+
+        <!-- Growth Analytics -->
+
+        <div class="card">
+
+            <h2>📈 Growth Analytics</h2>
+
+            <p>
+                <strong>Growth Score:</strong>
+                <span id="growthScore">0</span>
+            </p>
+
+            <p>
+                <strong>Total Tasks:</strong>
+                <span id="taskCount">0</span>
+            </p>
+
+        </div>
+
+        <!-- AI Suggestions -->
+
+        <div class="card">
+
+            <h2>🤖 AI Suggestions</h2>
+
+            <p id="aiSuggestion">
+
+                Start learning HTML & CSS
+
+            </p>
+
+        </div>
+
+        <!-- Chart Section -->
+
+        <div class="card">
+
+            <h2>📊 XP Growth Chart</h2>
+
+            <canvas id="xpChart"></canvas>
+
+        </div>
+
+        <!-- Project Features -->
+
+        <div class="card">
+
+            <h2>🚀 Project Features</h2>
+
+            <ul>
+
+                <li>🎮 Gamified Learning</li>
+
+                <li>⚡ XP Tracking</li>
+
+                <li>🏆 Leaderboard</li>
+
+                <li>🎖 Achievement Badges</li>
+
+                <li>🔥 Daily Streak</li>
+
+                <li>📈 Prefix Sum Analytics</li>
+
+                <li>🤖 AI Recommendations</li>
+
+                <li>📊 Growth Charts</li>
+
+                <li>💾 Local Storage</li>
+
+                <li>📱 Responsive Design</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            🚀 SkillQuest AI V2.0
+            | Built By Roushan Kumar
+        </p>
+
+    </footer>
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+  </html>
