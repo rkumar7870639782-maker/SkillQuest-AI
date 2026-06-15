@@ -1,0 +1,469 @@
+/* ==================================
+   SKILLQUEST AI V2.0
+   Cyber Hacker + Glassmorphism UI
+================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#050816;
+    color:#fff;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* =========================
+   Animated Cyber Background
+========================= */
+
+.background{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+    background:
+    linear-gradient(
+    135deg,
+    #050816,
+    #0f172a,
+    #111827,
+    #1e293b);
+
+    background-size:400% 400%;
+
+    animation:cyberMove 15s ease infinite;
+}
+
+@keyframes cyberMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* =========================
+   Header
+========================= */
+
+header{
+    text-align:center;
+    padding:30px 20px;
+}
+
+header h1{
+    font-size:2.8rem;
+
+    color:#00ff88;
+
+    text-shadow:
+    0 0 10px #00ff88,
+    0 0 20px #00ff88,
+    0 0 40px #00ff88;
+}
+
+header p{
+    margin-top:10px;
+    color:#cbd5e1;
+    font-size:1.1rem;
+}
+
+/* =========================
+   Grid Layout
+========================= */
+
+.container{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,
+    minmax(320px,1fr));
+
+    gap:20px;
+
+    padding-bottom:40px;
+}
+
+/* =========================
+   Glass Cards
+========================= */
+
+.card{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    backdrop-filter:
+    blur(14px);
+
+    border:
+    1px solid rgba(
+    255,255,255,0.15);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    transition:0.35s;
+
+    box-shadow:
+    0 8px 25px rgba(
+    0,255,136,0.15);
+}
+
+.card:hover{
+
+    transform:
+    translateY(-6px);
+
+    box-shadow:
+    0 12px 35px rgba(
+    0,255,136,0.30);
+}
+
+.card h2{
+
+    color:#00ff88;
+
+    margin-bottom:15px;
+}
+
+/* =========================
+   Inputs & Select
+========================= */
+
+input,
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:12px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:1rem;
+}
+
+input:focus,
+select:focus{
+
+    box-shadow:
+    0 0 10px #00ff88;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    color:black;
+
+    background:
+    linear-gradient(
+    135deg,
+    #00ff88,
+    #00d4ff);
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 20px #00ff88;
+}
+
+/* =========================
+   Profile Stats
+========================= */
+
+#xp,
+#level,
+#badge{
+
+    font-weight:bold;
+}
+
+#badge{
+    color:#ffd700;
+}
+
+/* =========================
+   Progress Bar
+========================= */
+
+.progress-bar{
+
+    width:100%;
+
+    height:28px;
+
+    background:#1e293b;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-bottom:12px;
+}
+
+#progressFill{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #00ff88,
+    #00d4ff);
+
+    transition:0.5s;
+}
+
+#progressText{
+    text-align:center;
+}
+
+/* =========================
+   Learning History
+========================= */
+
+#taskList{
+    list-style:none;
+}
+
+#taskList li{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding:12px;
+
+    margin-bottom:10px;
+
+    border-radius:10px;
+
+    border-left:
+    4px solid #00ff88;
+}
+
+/* =========================
+   Leaderboard
+========================= */
+
+#leaderboard{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.rank-card{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border-left:
+    4px solid #00ff88;
+
+    font-weight:bold;
+}
+
+/* =========================
+   Streak
+========================= */
+
+#streakCount{
+
+    text-align:center;
+
+    color:#ff9800;
+
+    font-size:3rem;
+
+    text-shadow:
+    0 0 10px orange,
+    0 0 20px orange;
+}
+
+/* =========================
+   Growth Analytics
+========================= */
+
+#growthScore{
+
+    color:#00ff88;
+
+    font-size:1.5rem;
+
+    font-weight:bold;
+}
+
+#taskCount{
+
+    color:#00d4ff;
+
+    font-size:1.3rem;
+
+    font-weight:bold;
+}
+
+/* =========================
+   AI Suggestions
+========================= */
+
+#aiSuggestion{
+
+    font-size:1.1rem;
+
+    line-height:1.6;
+
+    color:#f8fafc;
+}
+
+/* =========================
+   Chart Card
+========================= */
+
+canvas{
+
+    width:100% !important;
+
+    max-height:300px;
+}
+
+/* =========================
+   Feature List
+========================= */
+
+.card ul{
+    padding-left:20px;
+}
+
+.card ul li{
+    margin-bottom:10px;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#94a3b8;
+}
+
+/* =========================
+   Scrollbar
+========================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00ff88;
+    border-radius:10px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    .container{
+        width:95%;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    #streakCount{
+        font-size:2.3rem;
+    }
+}
+
+@media(max-width:480px){
+
+    header h1{
+        font-size:1.7rem;
+    }
+
+    header p{
+        font-size:0.95rem;
+    }
+
+    .card h2{
+        font-size:1.1rem;
+    }
+}
